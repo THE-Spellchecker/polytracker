@@ -34,7 +34,7 @@ uint8_t src[1024];
 uint32_t val = *(uint32_t*)src;
 ```
 
-In this example `val` should be labeled with the union of the four consecutive source taint lables. In this case a range is instead created representing all four labels.
+In this example `val` should be labeled with the union of the four consecutive source taint labels. In this case a range is instead created representing all four labels.
 
 The main motivation for introducing ranges is to allow for efficient membership testing. If a taint label is already included in a range of taint values, the range can be reused. It is possible to unfold the range into a tree of unions and walk the tree, but it requires more computation.
 
@@ -153,4 +153,4 @@ In this structure, the `fdidx` is an index into the `FDMappingHdr` array describ
 
 ## Portability
 
-The file format is currently not portable. There is no effort made to store values in anything other than the native endianess.
+The file format is currently not portable. There is no effort made to store values in anything other than the native endianness.

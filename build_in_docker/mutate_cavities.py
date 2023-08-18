@@ -33,7 +33,7 @@ def method_reverse(cavity: bytearray) -> bytearray:
 
 
 def method_flip(cavity: bytearray) -> bytearray:
-    """Cavity contenst is bit-flipped"""
+    """Cavity content is bit-flipped"""
     return bytearray((~x & 0xFF) for x in cavity)
 
 
@@ -49,7 +49,7 @@ method_mapping = {
 def iter_cavities(
     filename: Union[Path, str], cavities_file: Path
 ) -> Iterable[Tuple[int, int]]:
-    """Iterate all cavities in filename, as recordedd in cavities_file. Generates a (first, last) tuple for each cavity"""
+    """Iterate all cavities in filename, as recorded in cavities_file. Generates a (first, last) tuple for each cavity"""
     with open(cavities_file, "r") as f:
         rdr = csv.reader(f)
         yield from map(
@@ -175,7 +175,7 @@ def main():
       ./mutate_cavities.py --cavitydb=path-to.csv path-to-file-to-mutate.pdf
 
     this will generate a output file called path-to-file-to-mutate.zero.pdf
-    The zero indicates that mutation method was 'zero' i.e. fill with zeroes.
+    The zero indicates that mutation method was 'zero' i.e. fill with zeros.
 
     The program can be invoked with as many paths as you want to mutate files.
 

@@ -31,14 +31,14 @@ inline bool encloses(RangeTaint const &super, RangeTaint const &sub) {
   return (super.first <= sub.first && super.last >= sub.last);
 }
 
-// The Visitor implementes the union of two labels.
+// The Visitor implements the union of two labels.
 // It either returns one of the labels, if either subsumes
 // the other, or constructs a new Taint value representing
 // the union of the two Taints.
 // This class is intended to be used as a visitor for
 // Taints:
 // auto ret = std::visit(Visitor{l,r}, taintleft, taintright);
-// Assumption: Equal labels and zero-lables (non-tainted) is already
+// Assumption: Equal labels and zero-labels (non-tainted) is already
 // covered elsewhere.
 class Visitor {
 public:

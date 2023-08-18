@@ -8,7 +8,7 @@ With the VSCode extension installed, pull the [test NITF directory from the Galo
 
 ## Initial Results: Table 1
 
-Unfortunately, the NITF corpus we used in the paper to evaluate Nitro is not public and we do not own the rights to these files. Table 1 shows the results of running a PolyTracker and Ubet instrumeneted Nitro binary on one of these files, which is of NITF 2.0 format.
+Unfortunately, the NITF corpus we used in the paper to evaluate Nitro is not public and we do not own the rights to these files. Table 1 shows the results of running a PolyTracker and Ubet instrumented Nitro binary on one of these files, which is of NITF 2.0 format.
 
 `table_1_annotated_diff_with_fields.txt` is the results of combining UBet output with manual NITF field annotation using the Hex Editor with Tags extension.
 

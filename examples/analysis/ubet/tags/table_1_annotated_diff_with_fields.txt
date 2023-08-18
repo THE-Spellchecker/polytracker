@@ -12,7 +12,7 @@ DIFF
  [382, 383, 384] 3 byte field: Number of Labels (NUML)
  [385, 386, 387] 3 byte field: Number of Text Files (NUMT)
  [388, 389, 390] 3 byte field: Number of Data Extension Segments (NUMDES)
- [391, 392, 393] 3 byte field: Number of Reserved Extension Segements (NUMRES)
+ [391, 392, 393] 3 byte field: Number of Reserved Extension Segments (NUMRES)
  [394, 395, 396, 397, 398]
  [399, 400, 401, 402, 403]
  [354, 355, 356, 357, 358, 359] NITF File Header Length (HL)
@@ -43,7 +43,7 @@ DIFF
  [382, 383, 384] 3 byte field: Number of Labels (NUML)
  [385, 386, 387] 3 byte field: Number of Text Files (NUMT)
  [388, 389, 390] 3 byte field: Number of Data Extension Segments (NUMDES)
- [391, 392, 393] 3 byte field: Number of Reserved Extension Segements (NUMRES)
+ [391, 392, 393] 3 byte field: Number of Reserved Extension Segments (NUMRES)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
@@ -51,7 +51,7 @@ DIFF
  [382, 383, 384] 3 byte field: Number of Labels (NUML)
  [385, 386, 387] 3 byte field: Number of Text Files (NUMT)
  [388, 389, 390] 3 byte field: Number of Data Extension Segments (NUMDES)
- [391, 392, 393] 3 byte field: Number of Reserved Extension Segements (NUMRES)
+ [391, 392, 393] 3 byte field: Number of Reserved Extension Segments (NUMRES)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
@@ -151,9 +151,9 @@ DIFF
 +[388, 389, 390] 3 byte field: Number of Data Extension Segments (NUMDES)
 +[388, 389, 390] 3 byte field: Number of Data Extension Segments (NUMDES)
 +[388, 389, 390] 3 byte field: Number of Data Extension Segments (NUMDES)
-+[391, 392, 393] 3 byte field: Number of Reserved Extension Segements (NUMRES)
-+[391, 392, 393] 3 byte field: Number of Reserved Extension Segements (NUMRES)
-+[391, 392, 393] 3 byte field: Number of Reserved Extension Segements (NUMRES)
++[391, 392, 393] 3 byte field: Number of Reserved Extension Segments (NUMRES)
++[391, 392, 393] 3 byte field: Number of Reserved Extension Segments (NUMRES)
++[391, 392, 393] 3 byte field: Number of Reserved Extension Segments (NUMRES)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
  [360, 361, 362] 3 byte field: Number of Images (NUMI)
 -[360, 361, 362] 3 byte field: Number of Images (NUMI)
@@ -164,7 +164,7 @@ DIFF
 +[382, 383, 384] 3 byte field: Number of Labels (NUML)
 +[385, 386, 387] 3 byte field: Number of Text Files (NUMT)
 +[388, 389, 390] 3 byte field: Number of Data Extension Segments (NUMDES)
-+[391, 392, 393] 3 byte field: Number of Reserved Extension Segements (NUMRES)
++[391, 392, 393] 3 byte field: Number of Reserved Extension Segments (NUMRES)
 +[783] Number of Bands (NBANDS) 3 meaning RGB
 +[783] Number of Bands (NBANDS) 3 meaning RGB
 +[783] Number of Bands (NBANDS) 3 meaning RGB

@@ -157,7 +157,7 @@ public:
     update_buckets_used(current_bucket);
   }
 
-  // Returns wheter the bit designated by bitno is set or not.
+  // Returns whether the bit designated by bitno is set or not.
   // bitno >= bit_capactity will cause error_exit.
   bool is_set(BitIndex bitno) const {
     if (bitno >= BitCapacity)
@@ -179,7 +179,7 @@ private:
   // Returns a mask that filters out only bitno from a bucket
   // TODO(hbrodin): Does it matter which bit as long as it is consistent? I.e.
   // is it important that bit 64 is adjacent to 63 in memory. If so, need to
-  // handle endianess.
+  // handle endianness.
   inline BucketType mask(BitIndex bitno) const {
     size_t bitset = bitno % bits_per_bucket;
     return BucketType{1} << bitset;

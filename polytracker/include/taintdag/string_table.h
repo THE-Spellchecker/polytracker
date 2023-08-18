@@ -72,7 +72,7 @@ struct StringTableBase : public SectionBase {
     return {};
   }
 
-  // Returns a string from it's offset. Offset is typically returned from
+  // Returns a string from its offset. Offset is typically returned from
   // add_string().
   std::string_view from_offset(offset_t ofs) const {
     return *iterator{mem_.begin() + ofs};
@@ -116,7 +116,7 @@ struct StringTableBase : public SectionBase {
     SectionBase::span_t::iterator it_;
   };
 
-  // NOTE(hbrodin): Requires more modern version to compile. Not stricly needed.
+  // NOTE(hbrodin): Requires more modern version to compile. Not strictly needed.
   // static_assert(std::forward_iterator<iterator>);
 
   iterator begin() const { return iterator{mem_.begin()}; }

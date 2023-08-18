@@ -36,7 +36,7 @@ const storage_t mask_affects_control_flow =
 
 // Using two bits to encode type info and affects control flowin the stored
 // type. The stored type can hold at most two labels. Limit the label values to
-// 1 bit less than original capacity, to accomodate the two type/control flow
+// 1 bit less than original capacity, to accommodate the two type/control flow
 // bits.
 const size_t label_bits = std::numeric_limits<label_t>::digits - 1;
 const label_t max_label = static_cast<label_t>(1 << label_bits) -

@@ -27,7 +27,7 @@ struct TypeIndex<T, std::tuple<Types...>> {
         {(std::is_same_v<Types, T>)...}};
     const auto it = std::find(eq.begin(), eq.end(), true);
     if (it == eq.end())
-      std::runtime_error("Type is not in type sequnce");
+      std::runtime_error("Type is not in type sequence");
     return std::distance(eq.begin(), it);
   }();
 };

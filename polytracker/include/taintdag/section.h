@@ -48,7 +48,7 @@ protected:
     std::unique_lock<std::mutex> l_;
   };
 
-  // Returns a WriteCtx instance with the lock held after successfull
+  // Returns a WriteCtx instance with the lock held after successful
   // allocation. Callers have exclusive access for the life time of
   // WriteCtx.
   // N.b. size() competes for the same lock.
@@ -123,7 +123,7 @@ template <typename T> struct FixedSizeAlloc : SectionBase {
   // Helper type to ensure object construction can be done while holding a lock
   // to ensure exclusive access.
   struct ConstructCtx {
-    // WriteCtx from SectionBase provides accesss to the memory range and is
+    // WriteCtx from SectionBase provides access to the memory range and is
     // responsible for locking the section.
     SectionBase::WriteCtx ctx;
 
@@ -132,7 +132,7 @@ template <typename T> struct FixedSizeAlloc : SectionBase {
   };
 
   // Construct an object of type T in the section assigned memory.
-  // If successfull a ConstructCtx is returned. Callers have exclusive
+  // If successful a ConstructCtx is returned. Callers have exclusive
   // access to the section for the life time of the ConstructCtx.
   // N.b. count()/size() competes for the same lock.
   template <typename... Args>

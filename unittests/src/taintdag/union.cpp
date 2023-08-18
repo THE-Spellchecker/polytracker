@@ -115,7 +115,7 @@ TEST_CASE("Union Represents Same") {
       INFO("Base label union: " << base_labels);
       REQUIRE(taint_included(labels_result, ll, labels_left));
       REQUIRE(taint_included(labels_result, lr, labels_right));
-      // TODO (hbrodin): Shoud probably check that labels_result does not contain any labels not in labels_left/right
+      // TODO (hbrodin): Should probably check that labels_result does not contain any labels not in labels_left/right
       nvalues++;
     }
   }

@@ -118,7 +118,7 @@ struct Labels : public FixedSizeAlloc<storage_t> {
   void affects_control_flow(label_t label) {
     using labelq = utils::LabelDeq<32>;
 
-    // Do a check on label to see if it shoudld be added to the q.
+    // Do a check on label to see if it should be added to the q.
     // - If it affects control flow, ignore it. Already processed.
     // - If it is source taint, just mark it as affecting cf.
     // - else add for further processing

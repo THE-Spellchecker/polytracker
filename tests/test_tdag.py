@@ -149,7 +149,7 @@ def test_output_taints(input_file: Path, program_trace: ProgramTrace):
     # The output file
     of = Input(5, str(output_path), 0)
 
-    # First four ouputs have the same label and source, just increase offset
+    # First four outputs have the same label and source, just increase offset
     for i in range(0, 4):
         assert outputs[i].source.uid == of.uid
         assert outputs[i].source.path == of.path

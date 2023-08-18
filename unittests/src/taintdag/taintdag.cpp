@@ -110,7 +110,7 @@ TEST_CASE("Serialize deserialize for different events") {
       REQUIRE(s2.affects_control_flow);
     }
 
-    SECTION("Range affects soruce labels") {
+    SECTION("Range affects source labels") {
       auto rl = labels.union_taint(range.first, range.first + 1);
       auto rl2 = labels.union_taint(rl, range.first + 2);
       labels.affects_control_flow(rl2);

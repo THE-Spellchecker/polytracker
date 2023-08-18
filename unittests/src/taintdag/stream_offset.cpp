@@ -17,7 +17,7 @@ TEST_CASE("StreamOffset", "StreamOffset") {
     REQUIRE(ofs.increase(0, 3) == 3);
   }
 
-  SECTION("Reads doesn't interfer") {
+  SECTION("Reads do not interfere") {
     ofs.increase(0, 99);
     ofs.increase(1, 2);
 

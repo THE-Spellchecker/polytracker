@@ -24,7 +24,7 @@ public:
     new (&storage_) ArrayImpl;
     arr_active = true;
   }
-  // NOTE (hbrodin): Not implementing copy/move construct/assign  right now
+  // NOTE (hbrodin): Not implementing copy/move construct/assign right now
   // because it is not needed. Should be easy to fix though.
   LabelDeq(LabelDeq const &) = delete;
   LabelDeq(LabelDeq &&) = delete;

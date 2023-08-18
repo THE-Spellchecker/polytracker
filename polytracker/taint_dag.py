@@ -254,7 +254,7 @@ class TDControlFlowLogSection:
                 label, buffer = TDControlFlowLogSection._decode_varint(buffer)
                 yield TDTaintedControlFlowEvent(callstack[:], label)
 
-        # Drain callstack with artifical TDLeaveFunction events (using a dummy function id that doesn't exist)
+        # Drain callstack with artificial TDLeaveFunction events (using a dummy function id that doesn't exist)
         yield from TDControlFlowLogSection._align_callstack(-1, callstack)
 
     def function_id_mapping(self, id_to_name_array):
@@ -281,8 +281,8 @@ class TDBitmapSection:
     """Represents a bitmap section encoded by BitmapSectionBase.
 
     The only configuration currently supported is to have the BucketType template
-    parameter of BitmapSectionBase as uint64_t. It also requires the endianess to
-    not change as the implementation does not handle endianess in any specific way.
+    parameter of BitmapSectionBase as uint64_t. It also requires the endianness to
+    not change as the implementation does not handle endianness in any specific way.
     """
 
     def __init__(self, mem, hdr):

@@ -25,7 +25,7 @@ private:
 };
 
 /*
- * Should be tainted as its a copy of a tainted object
+ * Should be tainted as it's a copy of a tainted object
  */
 void copied_tainted_object(Container c) {
 	std::string tainted_str = c.getString();

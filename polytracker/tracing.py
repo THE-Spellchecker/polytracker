@@ -1,4 +1,4 @@
-"""A module defining the abstract classes used for represenging a program trace."""
+"""A module defining the abstract classes used for representing a program trace."""
 
 from abc import ABC, abstractmethod
 from argparse import ArgumentParser, Namespace

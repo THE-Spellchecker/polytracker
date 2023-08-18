@@ -25,7 +25,7 @@ public:
   // NOTE: Uses atomic fetch-add to update the offsets. It is assumed that
   // concurrent read operations for the same source is the result of invalid
   // code. Reads on the same source should be protected from running in
-  // parallell (at least for the taint sources considered here, e.g. files).
+  // parallel (at least for the taint sources considered here, e.g. files).
   source_offset_t increase(source_index_t idx, size_t len) {
     if (idx >= SourceCount) {
       error_exit("Attempted increase offset of source index ",

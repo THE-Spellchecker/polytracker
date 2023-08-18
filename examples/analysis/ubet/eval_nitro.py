@@ -165,7 +165,7 @@ def compare_inputs_used(dbg_tdfile, rel_tdfile):
 
 
 def compare_run_trace(tdfdbg, tdfrel):
-    # TODO(hbrodin): Just outputing runtrace for release atm.
+    # TODO(hbrodin): Just outputting runtrace for release atm.
     for e in tdfrel.events:
         fn = cxxfilt.demangle(tdfdbg.fn_headers[e.fnidx][0])
         print(f"{e}: {fn}")

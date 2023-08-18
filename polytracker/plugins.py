@@ -117,7 +117,7 @@ class PluginMeta(ABCMeta):
                 raise TypeError(f"PolyTracker plugin {name} does not define a name")
             if plugin_name in PLUGINS:
                 raise TypeError(
-                    f"Cannot instaitiate class {cls.__name__} because a plugin named {plugin_name} already exists,"
+                    f"Cannot instantiate class {cls.__name__} because a plugin named {plugin_name} already exists,"
                     f" implemented by class {PLUGINS[plugin_name]}"
                 )
             PLUGINS[plugin_name] = cls

@@ -115,7 +115,7 @@ polytracker instrument-targets my_binary
 ```
 
 `build` also supports more complex programs that use a build system like
-autotiools or CMake:
+autotools or CMake:
 
 ```bash
 polytracker build cmake .. -DCMAKE_BUILD_TYPE=Release
@@ -340,7 +340,7 @@ $ docker build -t trailofbits/polytracker .
 ## Current Status and Known Issues
 
 PolyTracker currently only runs on Linux, because that is the only system
-supported by the DataFlow Santizer. This limitation is just due to a lack of
+supported by the DataFlow Sanitizer. This limitation is just due to a lack of
 support for semantics for other OSes system calls, which could be added in the
 future. However, this means that running PolyTracker on a non-Linux system will
 require Docker to be installed.

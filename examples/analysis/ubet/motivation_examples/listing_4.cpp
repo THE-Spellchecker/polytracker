@@ -15,10 +15,10 @@
  * unreachable(). A binary built without optimizations does run the
  * infinite while loop as expected; Listing 4’s execution and output only
  * change when optimizations are enabled. This begs the question of whether
- * a commodity sanitizer such as UBSan could poten- tially expose such an
+ * a commodity sanitizer such as UBSan could potentially expose such an
  * UB-adjacent issue. Yet when built with Clang (with and without
  * optimizations) and UBSan, via the -fsanitize=undefined option
- * (which includes the - fsanitize=return check intended to alert
+ * (which includes the -fsanitize=return check intended to alert
  * when the end of a value-returning function is reached without returning
  * a value) the missing return is not caught. Such bugs and their full effects
  * on program control and data flow are difficult to diagnose, particularly in

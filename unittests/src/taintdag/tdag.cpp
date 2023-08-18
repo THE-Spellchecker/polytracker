@@ -116,7 +116,7 @@ TEST_CASE("SectionBase operations are consistent", "[SectionBase]") {
   auto ctx = sb.write(1);
   REQUIRE(!ctx);
 
-  // If offset is requirested for out of bounds memory, just abort. Something
+  // If offset is requested for out of bounds memory, just abort. Something
   // is seriously wrong.
   REQUIRE_THROWS_AS(sb.offset(SectionBase::span_t::iterator{}),
                     test::ErrorExit);
@@ -195,7 +195,7 @@ TEST_CASE("FixedSizeAlloc operations are consistent", "[FixedSizeAlloc]") {
     REQUIRE(s.count() == 3);
     REQUIRE(s.size() == 3 * sizeof(Dummy));
 
-    // Can't insert beyound capacity
+    // Can't insert beyond capacity
     auto ctx = s.construct(-5, 'D');
     REQUIRE(!ctx);
   }

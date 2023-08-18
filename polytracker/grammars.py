@@ -1140,7 +1140,7 @@ class Grammar:
                     recursive_rules = prod.remove_recursive_rules()
                     modified_last_pass = bool(recursive_rules)
                     if not prod.can_produce_terminal and prod is not self.start:
-                        # remove any produtions that only produce empty strings
+                        # remove any productions that only produce empty strings
                         removed = self.remove(prod)
                         assert removed
                         # print(f"removed {prod} because it was empty")
@@ -1382,7 +1382,7 @@ def to_dot(graph: DiGraph, comment: Optional[str] = None) -> graphviz.Digraph:
     :return: Graphviz DiGraph
 
     This function creates a dot object which can be saved to disk and converted to PDF
-    its a visualization of the chain fragment, useful for visualizing a reorg.
+    it's a visualization of the chain fragment, useful for visualizing a reorg.
     """
     if comment is not None:
         dot = graphviz.Digraph(comment=comment)

@@ -535,7 +535,7 @@ class DataFlowSanitizer {
   /// Note that a shadow type is always i16 when shouldTrackFieldsAndIndices
   /// returns false.
   Type *getShadowTy(Type *OrigTy);
-  /// Returns the shadow type of of V's type.
+  /// Returns the shadow type of V's type.
   Type *getShadowTy(Value *V);
 
   const uint64_t NumOfElementsInArgOrgTLS = ArgTLSSize / OriginWidthBytes;
@@ -2814,7 +2814,7 @@ void DFSanVisitor::visitMemSetInst(MemSetInst &I) {
 void DFSanVisitor::visitMemTransferInst(MemTransferInst &I) {
   IRBuilder<> IRB(&I);
 
-  // CopyOrMoveOrigin transfers origins by refering to their shadows. So we
+  // CopyOrMoveOrigin transfers origins by referring to their shadows. So we
   // need to move origins before moving shadows.
   if (DFSF.DFS.shouldTrackOrigins()) {
     IRB.CreateCall(

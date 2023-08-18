@@ -30,7 +30,7 @@ def get_valid_datalog_name(name):
 
 class DatalogTrueFactDecl:
     """
-    This is a fact that will always be true. This is our datalog equivalent of epislon productions
+    This is a fact that will always be true. This is our datalog equivalent of epsilon productions
     """
 
     def __init__(self):
@@ -117,7 +117,7 @@ class DatalogOutputDecl:
 
 class DatalogRuleDecl:
     """
-    This just forward declares a production rule by defining its arguemnts
+    This just forward declares a production rule by defining its arguments
     Name(a: number, b: number)
     """
 
@@ -138,7 +138,7 @@ class DatalogRuleList:
     def __init__(self, rule_sequence, start_term: int):
         self.rules: List[Union[DatalogTrueFact, DatalogRule]] = []
         for term in rule_sequence:
-            # If its a string, its a production rule
+            # If it's a string, it's a production rule
             if isinstance(term, str):
                 if term == TRUE_FACT_NAME:
                     self.rules.append(DatalogTrueFact(chr(start_term)))
@@ -149,7 +149,7 @@ class DatalogRuleList:
                     DatalogRule(term, chr(start_term), chr(start_term + 1))
                 )
                 start_term += 1
-            # If its a terminal, we must make sure the name matches that of the fact.
+            # If it's a terminal, we must make sure the name matches that of the fact.
             elif isinstance(term, Terminal):
                 for val in term.terminal:
                     self.rules.append(

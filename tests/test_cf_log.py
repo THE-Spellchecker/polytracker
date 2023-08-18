@@ -38,7 +38,7 @@ def test_cf_log(instrumented_binary: Path, trace_file: Path):
     with open(instrumented_binary.parent / "functionid.json", "rb") as f:
         functionid_mapping = list(map(cxxfilt.demangle, json.load(f)))
 
-    # Apply the id to function mappign
+    # Apply the id to function mapping
     cflog.function_id_mapping(functionid_mapping)
 
     expected_seq = [
@@ -61,7 +61,7 @@ def test_cf_log(instrumented_binary: Path, trace_file: Path):
         ),
         TDLeaveFunctionEvent(["main", "f1(unsigned char)", "f2(unsigned char)"]),
         TDLeaveFunctionEvent(["main", "f1(unsigned char)"]),
-        TDLeaveFunctionEvent(["main"]),  # This is artifical as there is a call to exit
+        TDLeaveFunctionEvent(["main"]),  # This is artificial as there is a call to exit
     ]
 
     # NOTE(hbrodin): Could have done assert list(cflog) == expected_seq, but this provides the failed element

@@ -76,7 +76,7 @@ static FILE *impl_fopen(const char *filename, const char *mode,
 }
 
 // Wrapper method for tainting a buffer, from source `fd` at `offset` having
-// `length`. If length is invalid nothing happpens.
+// `length`. If length is invalid nothing happens.
 static void taint_source_buffer(int fd, void *buff, Offset offset,
                                 Length length, dfsan_label &ret_label) {
   if (length.valid()) {

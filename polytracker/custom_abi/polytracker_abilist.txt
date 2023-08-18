@@ -1,5 +1,5 @@
 ########################################
-# Compatability additions
+# Compatibility additions
 ########################################
 fun:__dynamic_cast=uninstrumented
 fun:__dynamic_cast=discard

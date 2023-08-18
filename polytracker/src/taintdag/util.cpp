@@ -72,7 +72,7 @@ Offset Offset::from_off_t(off_t offset_value) {
     return Offset{};
   } else if (offset_value > max_source_offset) {
     // If this path is reached an offset that is larger than can be recorded
-    // in the TDAG structure is encounteed. There is not much to do but bail
+    // in the TDAG structure is encountered. There is not much to do but bail
     // out.
     error_exit("Offset ", offset_value,
                " is larger than maximum offset that can be handled:",

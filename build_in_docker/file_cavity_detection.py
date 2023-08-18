@@ -50,7 +50,7 @@ class Tool(ABC):
     def image_instrumented(self):
         """Docker image used for instrumented runs
 
-        This is typically for taint generateion/cavity detection"""
+        This is typically for taint generation/cavity detection"""
         pass
 
     def image_non_instrumented(self):
@@ -464,7 +464,7 @@ TOOL_MAPPING: Dict[str, Type[Tool]] = {
 def main():
     parser = ArgumentParser(
         description="""
-        Run file cavity detection in parallell.
+        Run file cavity detection in parallel.
     """
     )
 
@@ -473,7 +473,7 @@ def main():
         "-j",
         type=int,
         default=None,
-        help="Number of jobs to run in parallell",
+        help="Number of jobs to run in parallel",
     )
 
     parser.add_argument(
